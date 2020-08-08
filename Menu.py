@@ -10,7 +10,6 @@ HEIGHT = 512
 WIDTH = 1024
 display = pygame.display.set_mode((WIDTH, HEIGHT))
 
-
 class button():
 	def __init__(self, x, y, text = ''):
 		self.color = (204,255,255)
@@ -36,7 +35,6 @@ class button():
 	 			return True
 	 	return False
 
-
 def Menu(display):
 	display.fill((96,96,96))
 	isOverButtonColor = (192,192,192)
@@ -45,7 +43,6 @@ def Menu(display):
 
 	LeftSideCoordenates = [130, [i for i in range(45, 60*6, 60)]]
 	RightSideCoordenates = [600, [i for i in range(50, 60*6, 60)]]
-
 
 	algorithmType_label = main_font.render(f'Ordenar: ', 1, (0,0,0))
 	display.blit(algorithmType_label, (660, RightSideCoordenates[1][0]))

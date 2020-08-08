@@ -19,16 +19,12 @@ def updateScreen(algoritmo, swap1 = None, swap2 = None, display = Menu.display):
 
 	algoritmo.Choose_Sort_Type(swap1, swap2, Menu.display)
 
-	
-	check_events() 
-	pygame.display.update()
-
-def check_events():
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			pygame.quit()
 			sys.exit()
-				
+
+	pygame.display.update()
 
 def FinishedSort(time, display = Menu.display):
 
@@ -48,10 +44,7 @@ def FinishedSort(time, display = Menu.display):
 			if event.type == pygame.MOUSEBUTTONDOWN:
 
 				if RunAgain.isOver(pos):
-					print('RunAgain clicked')
 					RunAgain.color = (204, 99, 81)
 					Menu.main()
 
 		pygame.display.update()
-
-
