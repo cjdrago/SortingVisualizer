@@ -53,7 +53,7 @@ def Menu(display):
 	SelectionSort = button(LeftSideCoordenates[0], LeftSideCoordenates[1][1], algorithms.SelectionSort().name)
 	BubbleSort = button(LeftSideCoordenates[0], LeftSideCoordenates[1][2], algorithms.BubbleSort().name)
 	InsertionSort = button(LeftSideCoordenates[0], LeftSideCoordenates[1][3], algorithms.InsertionSort().name)
-	MergeSort = button(LeftSideCoordenates[0], LeftSideCoordenates[1][4], algorithms.MergeSort().name)
+	CocktailSort = button(LeftSideCoordenates[0], LeftSideCoordenates[1][4], algorithms.CocktailSort().name)
 	QuickSort = button(LeftSideCoordenates[0], LeftSideCoordenates[1][5], algorithms.QuickSort().name)
 
 	BotonColores = button(RightSideCoordenates[0], RightSideCoordenates[1][1], 'Colores')
@@ -69,7 +69,7 @@ def Menu(display):
 		SelectionSort.draw(display, (0,0,0))
 		BubbleSort.draw(display, (0,0,0))
 		InsertionSort.draw(display, (0,0,0))
-		MergeSort.draw(display, (0,0,0))
+		CocktailSort.draw(display, (0,0,0))
 		QuickSort.draw(display, (0,0,0))
 		BotonColores.draw(display, (0,0,0))
 		BotonBarrasAnchas.draw(display, (0,0,0))
@@ -85,31 +85,31 @@ def Menu(display):
 				if SelectionSort.isOver(pos):
 
 					SelectionSort.color = (204, 99, 81)
-					QuickSort.color = MergeSort.color = InsertionSort.color = BubbleSort.color = defaultButtonColor
+					QuickSort.color = CocktailSort.color = InsertionSort.color = BubbleSort.color = defaultButtonColor
 					algorithms.toDo['Algoritmo'] = algorithms.SelectionSort()
 
 				elif BubbleSort.isOver(pos):
 
 					BubbleSort.color = (204, 99, 81)
-					QuickSort.color = SelectionSort.color = MergeSort.color = InsertionSort.color =  defaultButtonColor
+					QuickSort.color = SelectionSort.color = CocktailSort.color = InsertionSort.color =  defaultButtonColor
 					algorithms.toDo['Algoritmo'] = algorithms.BubbleSort()
 
 				elif InsertionSort.isOver(pos):
 
 					InsertionSort.color = (204, 99, 81)
-					QuickSort.color = SelectionSort.color = MergeSort.color = BubbleSort.color = defaultButtonColor
+					QuickSort.color = SelectionSort.color = CocktailSort.color = BubbleSort.color = defaultButtonColor
 					algorithms.toDo['Algoritmo'] = algorithms.InsertionSort()
 
-				elif MergeSort.isOver(pos):
+				elif CocktailSort.isOver(pos):
 
-					MergeSort.color = (204, 99, 81)
+					CocktailSort.color = (204, 99, 81)
 					QuickSort.color = SelectionSort.color = InsertionSort.color = BubbleSort.color = defaultButtonColor
-					algorithms.toDo['Algoritmo'] = algorithms.MergeSort()
+					algorithms.toDo['Algoritmo'] = algorithms.CocktailSort()
 
 				elif QuickSort.isOver(pos):
 
 					QuickSort.color = (204, 99, 81)
-					SelectionSort.color = MergeSort.color = InsertionSort.color = BubbleSort.color = defaultButtonColor
+					SelectionSort.color = CocktailSort.color = InsertionSort.color = BubbleSort.color = defaultButtonColor
 					algorithms.toDo['Algoritmo'] = algorithms.QuickSort()
 
 				elif BotonColores.isOver(pos):

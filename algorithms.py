@@ -123,75 +123,31 @@ class InsertionSort(algoritmos):
 			self.arr[j+1] = key
 			self.showSwap(self.arr[i], self.arr[j+1])
 
-class MergeSort(algoritmos):
-	def __init__(self):
-		super().__init__("MergeSort")
+class CocktailSort(algoritmos):
+    def __init__(self):
+        super().__init__("CocktailSort")
 
-	# def sort(self, arr=[]):
-	#     if arr == []:
-	#         arr = self.arr
-	#     if len(arr) < 2:
-	#         return arr
-	#     mid = len(arr) // 2
-	#     left = self.sort(arr[:mid])
-	#     right = self.sort(arr[mid:])
-	#     # print(arr[:mid],'                ', arr[mid:])
-	#     # self.showSwap(arr[:mid], arr[mid:])
-	#     return self.merge(left, right)
-
-	# def merge(self, left, right):
-	#     result = []
-	#     i, j = 0, 0
-	#     while i < len(left) and j < len(right):
-	#         if left[i] < right[j]:
-	#             result.append(left[i])
-	#             self.showSwap(self.arr[i], result[i])
-
-	#             i += 1
-	#         else:
-	#             result.append(right[j])
-	#             # self.showSwap(self.arr[j], result[j])
-	#             j += 1
-
-	#     result += left[i:]
-	#     result += right[j:]
-	#     self.arr = result
-	#     # print(self.arr)
-	#     # self.showSwap()
-	#     return result
-
-	def sort(self, arr = []):
-		if arr == []:
-			arr = self.arr
-		if(len(arr)> 1 ):
-			mid = len(arr)//2
-			L = arr[:mid]
-			R = arr[mid:]
-			self.sort(L)
-			self.sort(R)
-
-			i = j = k = 0
-			while i < len(L) and j < len(R):
-				if L[i] < R[j]:
-					key = L[i]
-					arr[k] = L[i]
-					i+= 1
-				else:
-					key = R[j]
-					arr[k] = R[j]
-					j+= 1
-
-				k+= 1
-
-
-			while i < len(L):
-				arr[k] = L[i]
-				i+= 1
-				k+= 1
-			while j < len(R):
-				arr[k] = R[j]
-				j+= 1
-				k+= 1
+    def sort(self):
+        swapped = True
+        start = 0
+        end = len(self.arr) - 1
+        while swapped == True:
+            swapped = False
+            for i in range(start, end):
+                if (self.arr[i] > self.arr[i+1]):
+                    self.arr[i], self.arr[i+1] = self.arr[i+1], self.arr[i]
+                    swapped = True
+            self.showSwap(self.arr[i], self.arr[self.arr[i+1]])
+            if swapped == False:
+                break
+            swapped == False
+            end -= 1
+            for i in range(end-1, start-1, -1):
+                if self.arr[i] > self.arr[i+1]:
+                    self.arr[i], self.arr[i+1] = self.arr[i+1], self.arr[i]
+                    swapped = True
+            self.showSwap(self.arr[i], self.arr[self.arr[i+1]])
+        start += 1
 
 class QuickSort(algoritmos):
 	def __init__(self):
