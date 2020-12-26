@@ -10,6 +10,8 @@ HEIGHT = 512
 WIDTH = 1024
 display = pygame.display.set_mode((WIDTH, HEIGHT))
 
+STATUS = 'Sorting ...'
+
 class button():
 	def __init__(self, x, y, text = ''):
 		self.color = (204,255,255)
@@ -61,6 +63,7 @@ def Menu(display):
 	BotonBarrasDelgadas = button(RightSideCoordenates[0], RightSideCoordenates[1][3], 'Barras Delgadas')
 
 	RunButton = button(RightSideCoordenates[0], RightSideCoordenates[1][5], 'RUN')
+	
 	RunButton.height = 100
 	RunButton.color = (153, 153, 153)
 
@@ -140,7 +143,8 @@ def Menu(display):
 def main():
 	Menu(display)
 	algorithms.toDo['Algoritmo'].GenerateArr()
-	time = algorithms.toDo['Algoritmo'].run()
+	time = algorithms.toDo['Algoritmo'].run()[1]
+	STATUS = 'Sorted!'
 	SortDisplay.FinishedSort(time)
 
 if __name__ == "__main__":

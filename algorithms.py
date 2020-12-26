@@ -7,6 +7,7 @@ toDo = {
 		 "Tipo": None
 		}
 
+
 class algoritmos():
 	def __init__(self, name):
 		self.number = None
@@ -51,6 +52,7 @@ class algoritmos():
 			pygame.draw.rect(display, (0,0,0), (i*bar_Width-2, HEIGHT - 2, bar_Width + 4, -self.arr[i]*8 + 4), 0)
 			filled_rect = pygame.Rect(i*bar_Width, HEIGHT, bar_Width, -self.arr[i]*8)
 			pygame.draw.rect(display, colour, filled_rect)
+
 
 	def SortThinBars(self, Swap_Value_1, Swap_Value_2, display):
 		WIDTH, HEIGHT = pygame.display.get_surface().get_size()
