@@ -4,7 +4,7 @@ The sorting visualizer project goal is to show explicitly to users the differenc
 
 <br>
 
-To show those algorithms, I selected three different visualization forms: wide bars (*sorting array has smaller length*), thin bars (*sorting array has a great amount  of items*) and color (*more fun way to observe the sorting process*).
+To show those algorithms, I selected three different visualization forms: wide bars (*sorting array has smaller length*), thin bars (*sorting array has a great amount  of items*) and color (*funnier way to observe the sorting process*).
 
 <br>
 
